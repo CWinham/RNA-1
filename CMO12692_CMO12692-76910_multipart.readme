@@ -1,0 +1,25 @@
+Instructions for downloading the data
+
+1. Download the wget input file (CMO12692-76910_multipart.wget) from PPMS
+
+2. Open a Terminal window (MacOS or Linux)
+
+3. Change to the folder where you would like to download the data
+
+    cd path/to/folder
+
+4. Download the data using the following command:
+
+    wget -i path/to/CMO12692-76910_multipart.wget
+
+Instructions for extracting the data (AFTER downloading is complete)
+
+5. Verify the md5 checksums of the downloaded multipart
+   files with the provided pre-computed md5 checksums in
+   CMO12692-76910_multipart.md5
+
+    md5sum CMO12692-76910.tar.part*
+
+6. Extract the data using the following command
+
+    cat CMO12692-76910.tar.part* | tar -xf -
